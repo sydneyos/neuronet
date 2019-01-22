@@ -24,8 +24,7 @@ trait NeuronetService extends Service {
   def hello(id: String): ServiceCall[NotUsed, String]
 
   /**
-    * Example: curl -H "Content-Type: application/json" -X POST -d '{"message":
-    * "Hi"}' http://localhost:9000/api/hello/Hi
+    * Example: curl -H "Content-Type: application/json" -X POST -d '{"message":"Hi"}' http://localhost:9000/api/hello/Alice
     */
   def useGreeting(id: String): ServiceCall[GreetingMessage, Done]
 

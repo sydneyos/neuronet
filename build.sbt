@@ -3,7 +3,9 @@ version in ThisBuild := "1.0-SNAPSHOT"
 
 // the Scala version that will be used for cross-compiled libraries
 scalaVersion in ThisBuild := "2.12.4"
-lagomKafkaPropertiesFile in ThisBuild := Some((baseDirectory in ThisBuild).value / "project" / "kafka-server.properties")
+lagomKafkaEnabled in ThisBuild := false
+lagomKafkaAddress in ThisBuild := "localhost:9092"
+// lagomKafkaPropertiesFile in ThisBuild := Some((baseDirectory in ThisBuild).value / "project" / "kafka-server.properties")
 
 val macwire = "com.softwaremill.macwire" %% "macros" % "2.3.0" % "provided"
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.4" % Test
